@@ -3,7 +3,7 @@
 **ASTRO-Math** is a web-based educational game designed to make learning math fun! Players encounter asteroids carrying math problems, and their mission is to solve these problems to destroy the asteroids and progress through levels.
 
 ## 🚀 Demo
-Explore the live version of ASTRO-Math here: [ASTRO-Math](#) https://astro-math.netlify.app/
+Explore the live version of ASTRO-Math here: https://astro-math.netlify.app/
 
 ## 📂 GitHub Repository
 Find the source code on GitHub: [ASTRO-Math Repository](https://github.com/ssingh-shubham/Astro_Math)
