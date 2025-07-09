@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/ssingh-shubham/Astro_Math/'
+               'git branch: 'main', url: 'https://github.com/ssingh-shubham/Astro_Math/''
             }
         }
         stage('Build') {
