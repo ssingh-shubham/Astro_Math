@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        // Define tools if needed, e.g., NodeJS, Maven
-        // nodejs 'NodeJS_18' // Uncomment if configured in Jenkins
-    }
-
     stages {
 
         stage('Checkout SCM') {
@@ -17,7 +12,7 @@ pipeline {
         stage('Tool Install') {
             steps {
                 echo 'Installing required tools if configured'
-                // Example: sh 'npm install'
+                // Example: sh 'npm install' if NodeJS or other tools are set up manually
             }
         }
 
@@ -30,14 +25,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'No build needed for HTML/CSS/JS'
-                // Or use: sh 'npm run build' if applicable
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Run tests here if any'
-                // Example: sh 'npm test'
             }
         }
 
