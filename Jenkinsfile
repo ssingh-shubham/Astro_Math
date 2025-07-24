@@ -43,20 +43,7 @@ pipeline {
             }
         }
 
-        stage('Docker Build Application') {
-            steps {
-                script {
-                    docker.build('astro-math:latest')
-                }
-            }
-        }
 
-        stage('Deploy') {
-            steps {
-                sh 'cp -r * /var/www/html/'
-            }
-        }
-    }
 
     post {
         success {
