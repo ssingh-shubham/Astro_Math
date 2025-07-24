@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        // Add tool installation if needed (e.g., Maven, NodeJS)
-        // nodejs 'NodeJS_18' // Uncomment if NodeJS tool is configured in Jenkins
+        // Define tools if needed, e.g., NodeJS, Maven
+        // nodejs 'NodeJS_18' // Uncomment if configured in Jenkins
     }
 
     stages {
@@ -16,9 +16,8 @@ pipeline {
 
         stage('Tool Install') {
             steps {
-                echo 'Tools like NodeJS, Maven can be automatically installed via Jenkins toolchains'
-                // Example if using Node
-                // sh 'npm install'
+                echo 'Installing required tools if configured'
+                // Example: sh 'npm install'
             }
         }
 
@@ -31,19 +30,23 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'No build needed for HTML/CSS/JS'
-                // Or run any frontend build tools if applicable, e.g., npm run build
+                // Or use: sh 'npm run build' if applicable
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Run frontend or backend tests here'
-                // For example:
-                // sh 'npm test'
+                echo 'Run tests here if any'
+                // Example: sh 'npm test'
             }
         }
 
-
+        stage('Deploy') {
+            steps {
+                sh 'cp -r * /var/www/html/'
+            }
+        }
+    }
 
     post {
         success {
